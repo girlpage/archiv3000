@@ -1463,6 +1463,40 @@ img {
     width: 100%;
 }
 
+.prompt-container {
+    position: relative;
+    display: inline-block; /* oder block, je nach Wunsch */
+    width: 100%; /* Du kannst das auch auf 200px oder eine andere Breite setzen */
+}
+  
+.prompt-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.prompt-container .overlay {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); /* halbtransparenter, dunkler Hintergrund */
+    color: #fff;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+  
+.prompt-container:hover .overlay {
+    opacity: 1;
+}
+  
+
 .prompt-3,
 .prompt-4,
 .prompt-5,
