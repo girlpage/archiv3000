@@ -921,7 +921,7 @@ img {
 .container-plakat-eo {
     display: block;
     margin-inline: auto; /* Element wird an den linken Rand geschoben */
-    width: 55%
+    width: 50%
 }
 
 @media (max-width: 375px) {        /* schwarzen hintergrund entfernen */
@@ -1010,30 +1010,120 @@ img {
     padding: 20px;
 }
 
-.video-pp {
-    width: 100%;
+
+.img-pp { /* park platz */
+    display: block;
+    margin-inline: auto;
+    max-width: 70%; 
+    gap: 10px; 
+    overflow: hidden; 
+    user-select: none;
 }
 
 .gif-pp { /* park platz */
-    max-width: 80%; 
+    display: block;
+    margin-inline: auto;
+    max-width: 70%; 
     gap: 10px; 
     overflow: hidden; 
-    margin: 0px 0px 0px 50px; 
     user-select: none;
+}
+
+@media (max-width: 375px) {        /* schwarzen hintergrund entfernen */
+    .gif-pp { /* park platz */
+        display: block;
+        margin-inline: auto;
+        max-width: 100%; 
+        gap: 10px; 
+        overflow: hidden; 
+        user-select: none;
+    }
+}
+
+@media (max-width: 390px) {        /* schwarzen hintergrund entfernen */
+    .gif-pp { /* park platz */
+        display: block;
+        margin-inline: auto;
+        max-width: 100%; 
+        gap: 10px; 
+        overflow: hidden; 
+        user-select: none;
+    }
+}
+
+@media (max-width: 414px) {        /* schwarzen hintergrund entfernen */
+    .gif-pp { /* park platz */
+        display: block;
+        margin-inline: auto;
+        max-width: 100%; 
+        gap: 10px; 
+        overflow: hidden; 
+        user-select: none;
+    }
+}
+
+@media (max-width: 430px) {        /* schwarzen hintergrund entfernen */
+    .gif-pp { /* park platz */
+        display: block;
+        margin-inline: auto;
+        max-width: 100%; 
+        gap: 10px; 
+        overflow: hidden; 
+        user-select: none;
+    }
 }
 
 .sujets-pp {
-    max-width: 80%; 
-    gap: 10px;
+    display: block;
+    margin-inline: auto;
+    max-width: 70%; 
+    gap: 10px; 
     overflow: hidden; 
-    margin: 0px 0px 0px 50px; 
     user-select: none;
 }
 
-.img-pp {
-    display: flex;
-    margin-inline: auto;
-    max-width: 80%;
+@media (max-width: 375px) {        /* schwarzen hintergrund entfernen */
+    .sujets-pp {
+        display: block;
+        margin-inline: auto;
+        max-width: 100%; 
+        gap: 10px; 
+        overflow: hidden; 
+        user-select: none;
+    }
+}
+
+@media (max-width: 390px) {        /* schwarzen hintergrund entfernen */
+    .sujets-pp {
+        display: block;
+        margin-inline: auto;
+        max-width: 100%; 
+        gap: 10px; 
+        overflow: hidden; 
+        user-select: none;
+    }
+}
+
+@media (max-width: 414px) {        /* schwarzen hintergrund entfernen */
+    .sujets-pp {
+        display: block;
+        margin-inline: auto;
+        max-width: 100%; 
+        gap: 10px; 
+        overflow: hidden; 
+        user-select: none;
+    }
+}
+
+@media (max-width: 430px) {        /* schwarzen hintergrund entfernen */
+    .sujets-pp {
+        display: block;
+        margin-inline: auto;
+        max-width: 100%; 
+        gap: 10px; 
+        overflow: hidden; 
+        user-select: none;
+    }
 }
 
 .postkarte-container {
@@ -1360,8 +1450,9 @@ img {
 
 .video-eo {
     position: relative;
-    padding: 350px 0px 0px 0px;
+    padding: 440px 0px 0px 0px;
     width: 100%;
+    height: 100%;
 }
 
 .container-ua-prompts {
