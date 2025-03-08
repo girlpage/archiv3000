@@ -92,6 +92,13 @@ img {
     padding: 0px 0px 10px 0px;
 }
 
+.figcaption-ua {          
+    font-size: var(--font-size-bildunterschrift);
+    font-family: "authentic-sans";
+    color: var(--white);
+    padding: 0px 10px 10px 0px;
+}
+
 .figcaption-mono {          
     font-size: var(--font-size-bildunterschrift);
     font-family: "IBMPlexMono";
@@ -1494,32 +1501,6 @@ img {
   
 .prompt-container:hover .overlay {
     opacity: 1;
-}
-  
-
-.prompt-3,
-.prompt-4,
-.prompt-5,
-.prompt-6,
-.prompt-7,
-.prompt-8,
-.prompt-9,
-.prompt-10,
-.prompt-11,
-.prompt-12,
-.prompt-13,
-.prompt-14,
-.prompt-15,
-.prompt-16,
-.prompt-17
-.prompt-18
-.prompt-19
-.prompt-20 {
-    display: flex;
-    flex-direction: column;
-    max-width: 200px;
-    border-radius: 20px;
-    margin: 0px 0px 0px 0px;
 }
 
 .plakat-salzhaus {
