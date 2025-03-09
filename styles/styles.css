@@ -32,6 +32,15 @@ html, body {
     cursor: url('curs-3.png') 0 0, auto;
 }
 
+body {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
 img { /* images */
     max-width: 100%;
     user-select: none;
@@ -193,8 +202,24 @@ img {
     }
 }
 
-.container-menue {           
-    height: auto;                    
+#button-archiv, 
+#button-instagram, 
+#button-mail,
+#button-kontakt {
+    background-color: transparent;
+    border: none;                 
+    display: flex;
+    flex-direction: column;
+    justify-content: left; 
+    color: var(--white);
+    padding: 0px 0px 0px 0px;
+    font-family: "IBMPlexMono";
+    font-size: 1.2rem;
+    z-index: 9999;
+    user-select: none;
+}
+
+.container-menue {                         
     display: inline-flex; 
     position: fixed;
     justify-content: left; 
@@ -202,12 +227,12 @@ img {
     padding: 5px 0px 0px 18px;
     font-family: "IBMPlexMono";
     font-size: 1.2rem;
-    gap: 20px;
+    gap: 50px;
     z-index: 9999;
 }
 
 @media (max-width: 375px) {
-    .container-menue {                  
+    .container-menue {                         
         display: inline-flex; 
         position: fixed;
         justify-content: left; 
@@ -215,13 +240,13 @@ img {
         padding: 5px 0px 0px 18px;
         font-family: "IBMPlexMono";
         font-size: 1.2rem;
-        gap: 22px;
+        gap: 30px;
         z-index: 9999;
     }
 }
 
 @media (max-width: 390px) {
-    .container-menue {                  
+    .container-menue {                         
         display: inline-flex; 
         position: fixed;
         justify-content: left; 
@@ -229,13 +254,13 @@ img {
         padding: 5px 0px 0px 18px;
         font-family: "IBMPlexMono";
         font-size: 1.2rem;
-        gap: 22px;
+        gap: 30px;
         z-index: 9999;
     }
 }
 
 @media (max-width: 414px) {
-    .container-menue {                  
+    .container-menue {                         
         display: inline-flex; 
         position: fixed;
         justify-content: left; 
@@ -243,13 +268,13 @@ img {
         padding: 5px 0px 0px 18px;
         font-family: "IBMPlexMono";
         font-size: 1.2rem;
-        gap: 22px;
+        gap: 30px;
         z-index: 9999;
     }
 }
 
 @media (max-width: 430px) {
-    .container-menue {                  
+    .container-menue {                         
         display: inline-flex; 
         position: fixed;
         justify-content: left; 
@@ -257,14 +282,9 @@ img {
         padding: 5px 0px 0px 18px;
         font-family: "IBMPlexMono";
         font-size: 1.2rem;
-        gap: 22px;
+        gap: 30px;
         z-index: 9999;
     }
-}
-
-.computer-contact {
-    display: sticky;
-    max-width: 20%;
 }
 
 .container-project { /* container projects */
@@ -275,7 +295,35 @@ img {
 
 .container-kontakt { /* container kontakt */
     height: auto;
-    padding: 15px 0px 0px 20px;
+    padding: 60px 0px 0px 20px;
+}
+
+@media (max-width: 375px) {
+    .container-kontakt { /* container kontakt */
+        height: auto;
+        padding: 20px 0px 0px 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    .container-kontakt { /* container kontakt */
+        height: auto;
+        padding: 20px 0px 0px 20px;
+    }
+}
+
+@media (max-width: 414px) {
+    .container-kontakt { /* container kontakt */
+        height: auto;
+        padding: 20px 0px 0px 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .container-kontakt { /* container kontakt */
+        height: auto;
+        padding: 20px 0px 0px 20px;
+    }
 }
 
 .index_grid { /* index image grid */
@@ -812,6 +860,84 @@ img {
     }
 }
 
+.lauftext-tree p {
+    opacity: 0;
+    transform: translateY(20px); /* Start von oben */
+    transition: opacity 0.6s ease-out, transform 0.1s ease-out;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    font-family: "IBMPlexMono";
+    font-size: var(--font-size-lauftext);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 375px) {
+    .lauftext-tree p {
+        opacity: 0;
+        transform: translateY(20px); /* Start von oben */
+        transition: opacity 0.6s ease-out, transform 0.1s ease-out;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        font-family: "IBMPlexMono";
+        font-size: var(--font-size-lauftext-2);
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 390px) {
+    .lauftext-tree p {
+        opacity: 0;
+        transform: translateY(20px); /* Start von oben */
+        transition: opacity 0.6s ease-out, transform 0.1s ease-out;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        font-family: "IBMPlexMono";
+        font-size: var(--font-size-lauftext-2);
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 414px) {
+    .lauftext-tree p {
+        opacity: 0;
+        transform: translateY(20px); /* Start von oben */
+        transition: opacity 0.6s ease-out, transform 0.1s ease-out;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        font-family: "IBMPlexMono";
+        font-size: var(--font-size-lauftext-2);
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 430px) {
+    .lauftext-tree p {
+        opacity: 0;
+        transform: translateY(20px); /* Start von oben */
+        transition: opacity 0.6s ease-out, transform 0.1s ease-out;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        font-family: "IBMPlexMono";
+        font-size: var(--font-size-lauftext-2);
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+}
+
+.lauftext-tree p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .lauftext-kontakt { /* paragraph text kontakt */        
     max-width: 500px;
     padding: 15px 20px 0px 0px;
@@ -819,16 +945,6 @@ img {
     align-items: left;
     font-family: "authentic-sans";
     font-size: var(--font-size-lauftext);
-    line-height: 1.6;
-    color: var(--white);
-}
-
-.lauftext-kontakt-tree { /* paragraph text kontakt */        
-    padding: 15px 20px 0px 0px;
-    justify-content: center;
-    align-items: left;
-    font-family: "authentic-sans";
-    font-size: var(--font-size-bildunterschrift);
     line-height: 1.6;
     color: var(--white);
 }
@@ -915,6 +1031,15 @@ img {
         padding: 60px 0px 0px 0px;
         max-width: 93%;
     }   
+}
+
+.img_archiv {
+    opacity: 0;
+    transition: opacity 0.2s linear; /* Keine easing-Funktion */
+}
+
+.img_archiv.visible {
+    opacity: 1;
 }
 
 .img_archiv { /* image hover effect archiv */
