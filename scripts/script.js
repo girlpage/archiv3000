@@ -103,3 +103,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // 8️⃣ Debugging-Log
     console.log(`🚀 Script loaded on ${window.location.pathname} & Animations initialized.`);
 });
+
+(function() {
+    const devToolsOpen = new Function("debugger");
+    setInterval(() => {
+        try {
+            devToolsOpen();
+        } catch (e) {
+            document.body.innerHTML = `<pre class="matrix-mode">
+            🟢 Developer Detected 🟢
+            Welcome to the system, Operator.
+            Access: GRANTED
+            Loading archives...
+            </pre>`;
+        }
+    }, 500);
+})();
+
+console.log("%c 🚀 Welcome to archiv3000! ", "background: black; color: cyan; font-size: 16px;");
+console.log("%c You found the hidden console message! If you want to collaborate, email me at leandra.tmn@gmail.com", "background: black; color: limegreen;");
