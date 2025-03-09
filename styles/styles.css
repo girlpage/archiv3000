@@ -217,6 +217,16 @@ img {
     font-size: 1.2rem;
     z-index: 9999;
     user-select: none;
+    background: rgba(0, 0, 0, 0.7); /* Optional: leicht transparent für Design */
+}
+
+.container-menue a {
+    transition: color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.container-menue a:hover {
+    color: var(--highlight-color); /* Passe diese Farbe an deine Farbpalette an */
+    transform: translateX(2px); /* Kleine Bewegung für „Feedback“ */
 }
 
 .container-menue {                         
