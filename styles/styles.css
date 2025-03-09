@@ -29,7 +29,7 @@ html, body {
     overflow-y: auto;   /* vertical scrolling */
     overflow-x: hidden; /* no horizontal scrolling */
     max-width: none;
-    cursor: url('curs-3.png') 0 0, auto;
+    cursor: url("cursor.png"), auto;
 }
 
 body {
@@ -86,7 +86,6 @@ video, iframe {
 a { 
     text-decoration: none;
     color: var(--white);
-    cursor: url('curs-3.png') 0 0, auto;
     user-select: none;
 }
 
