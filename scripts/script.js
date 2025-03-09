@@ -62,6 +62,44 @@ document.addEventListener("DOMContentLoaded", () => {
         animateImagesRandom();
     }
 
-    // 7️⃣ Debugging-Log
-    console.log(`🚀 Script loaded on ${window.location.pathname} & Scroll + Image + Tree Animation initialized.`);
+    // 7️⃣ ASCII-Effekt für Cursor (nur im Kontakt-Bereich)
+    const contactSection = document.querySelector(".container-kontakt");
+    if (contactSection) {
+        document.addEventListener("mousemove", (e) => {
+            // Limitiert die Anzahl der Symbole → Weniger Überlagerung
+            if (Math.random() < 0.4) { // Nur 40% der Bewegungen erzeugen ein Zeichen
+                createAsciiEffect(e.clientX, e.clientY);
+            }
+        });
+    }
+
+    function createAsciiEffect(x, y) {
+        const asciiChars = ["3", "0", "✱", " ", "0"]; // Mehr Variation
+        const char = asciiChars[Math.floor(Math.random() * asciiChars.length)]; // Zufälliges Zeichen
+
+        const asciiElement = document.createElement("span");
+        asciiElement.classList.add("ascii-cursor");
+        asciiElement.innerText = char;
+        asciiElement.style.left = `${x}px`;
+        asciiElement.style.top = `${y}px`;
+
+        document.body.appendChild(asciiElement);
+
+        // Weiter auseinander → Große Bewegungsspanne
+        setTimeout(() => {
+            asciiElement.style.transform = `translate(${Math.random() * 150 - 75}px, ${Math.random() * 150 - 75}px)`;
+            asciiElement.style.opacity = "0.8";
+        }, 500);
+
+        setTimeout(() => {
+            asciiElement.style.opacity = "0";
+        }, 500);
+
+        setTimeout(() => {
+            asciiElement.remove();
+        }, 2000);
+    }
+
+    // 8️⃣ Debugging-Log
+    console.log(`🚀 Script loaded on ${window.location.pathname} & Animations initialized.`);
 });
