@@ -100,6 +100,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 2000);
     }
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const navProjectTitle = document.getElementById("project-title");
+        
+        if (navProjectTitle) {
+          // Initiale Einstellungen: volle Opazität und Transition
+          navProjectTitle.style.opacity = "1";
+          navProjectTitle.style.transition = "opacity 0.5s ease";
+      
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 0) {
+              // Beim Scrollen: sanft ausblenden
+              navProjectTitle.style.opacity = "0";
+            } else {
+              // Wenn der Nutzer wieder nach oben scrollt: wieder einblenden
+              navProjectTitle.style.opacity = "1";
+            }
+          });
+        }
+      });
+
     // 8️⃣ Debugging-Log
     console.log(`🚀 Script loaded on ${window.location.pathname} & Animations initialized.`);
 });

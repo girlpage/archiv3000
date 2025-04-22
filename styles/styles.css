@@ -231,6 +231,21 @@ img {
     background: rgba(0, 0, 0, 0.7); 
 }
 
+#project-titel {
+    background-color: transparent;
+    border: none;                 
+    display: flex;
+    flex-direction: column;
+    justify-content: left; 
+    color: var(--white);
+    padding: 0px 0px 0px 0px;
+    font-family: "IBMPlexMono";
+    font-size: 1.2rem;
+    z-index: 9999;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.7); 
+}
+
 .container-menue a {
     transition: color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
