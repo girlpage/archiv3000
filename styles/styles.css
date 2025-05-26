@@ -1704,3 +1704,47 @@ a {
         width: 100%;
     }
 }
+
+.pillbox-container {
+    padding: 60px 0px 0px 0px;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 3fr 3fr 3fr 1fr; 
+    gap: 20px; 
+}
+
+@media (max-width: 375px) {   
+    .pillbox-container {
+        display: block;
+        margin-inline: auto; 
+        max-width: 100%;
+        padding: 60px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 390px) {       
+    .pillbox-container {
+        display: block;
+        margin-inline: auto; 
+        max-width: 100%;
+        padding: 60px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 414px) {      
+    .pillbox-container {
+        display: block;
+        margin-inline: auto; 
+        max-width: 100%;
+        padding: 60px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 430px) {        
+    .pillbox-container {
+        display: block;
+        margin-inline: auto; 
+        max-width: 100%;
+        padding: 60px 0px 0px 0px;
+    }
+}

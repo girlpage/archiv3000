@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (href && !href.startsWith("#")) {
                 document.body.style.opacity = "0";
                 setTimeout(() => {
-                    window.location.href = href;
+                    window.location.href = href; 
                 }, 200);
             }
         });
