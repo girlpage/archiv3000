@@ -140,5 +140,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
 })();
 
+function setupHoverTitles() {
+  const isLargeScreen = window.matchMedia('(min-width: 431px)').matches;
+  const buttonProjekt = document.getElementById('button-projekt');
+  const imageLinks = document.querySelectorAll('.img_archiv');
+
+  imageLinks.forEach(link => {
+    const img = link.querySelector('img');
+    const caption = link.querySelector('.figcaption_index');
+
+    img.onmouseenter = null;
+    img.onmouseleave = null;
+
+    if (isLargeScreen) {
+      img.onmouseenter = () => {
+        buttonProjekt.textContent = caption.textContent;
+        buttonProjekt.classList.add('visible');
+      };
+
+      img.onmouseleave = () => {
+        buttonProjekt.textContent = '';
+        buttonProjekt.classList.remove('visible');
+      };
+    }
+  });
+
+  if (!isLargeScreen) {
+    buttonProjekt.textContent = '';
+    buttonProjekt.classList.remove('visible');
+  }
+}
+
+setupHoverTitles();
+window.addEventListener('resize', setupHoverTitles);
+
 console.log("%c 🚀 Welcome to archiv3000! ", "background: black; color: cyan; font-size: 16px;");
 console.log("%c You found the hidden console message! If you want to collaborate, email me at leandra.tmn@gmail.com", "background: black; color: limegreen;");

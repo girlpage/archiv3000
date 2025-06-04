@@ -16,7 +16,9 @@
     --font-size-bildunterschrift: 0.8rem; /* font size figcaption */
     --font-size-bildunterschrift-2: 0.6rem; /* font size figcaption */
 }
+
 /* ---------------- CURSOR ---------------- */
+
 * {
     cursor: url("cursor.png"), auto;
 }
@@ -29,7 +31,9 @@
     pointer-events: none;
     opacity: 1;
 }
+
 /* ---------------- HTML___BODY ---------------- */
+
 html, body { 
     margin: 0;
     border: 0;                     
@@ -43,7 +47,9 @@ html, body {
     overflow-x: hidden; /* no horizontal scrolling */
     max-width: none;
 }
+
 /* ---------------- BODY___ANIMATION ---------------- */
+
 body {
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
@@ -52,17 +58,23 @@ body {
 body.fade-in {
     opacity: 1;
 }
+
 /* ---------------- IMG ---------------- */
+
 img { 
     max-width: 100%;
     user-select: none;
 }   
+
 /* ---------------- VIDEO___I FRAME ---------------- */
+
 video, iframe {
     max-width: 100%;
     padding: none;
 }
+
 /* ---------------- SCROLLBAR ---------------- */  
+
 ::-webkit-scrollbar { 
     width: 10px;
     --background-scrollbar: transparent;    
@@ -79,18 +91,24 @@ video, iframe {
 ::-webkit-scrollbar-corner {    
     background: transparent;     
 }
+
 /* ---------------- SELECTION ---------------- */
+
 ::selection { 
     background-color: var(--blue);
     color: var(--black);
 }
+
 /* ---------------- LINKS ---------------- */
+
 a { 
     text-decoration: none;
     color: var(--white);
     user-select: none;
 }
+
 /* ---------------- FONTS ---------------- */
+
 @font-face { /* font authentic sans */
     font-family: 'authentic-sans';
     src: url('../authentic-sans-90.woff2') format('woff2');
@@ -100,8 +118,10 @@ a {
     font-family: 'IBMPlexMono';
     src: url('../IBMPlexMono.woff2') format('woff2');
 }
+
 /* ---------------- FONTSIZES___FONTSTYLES ---------------- */
 /* -------- LAUFTEXT___PROJECT -------- */
+
 .lauftext-project {                                                      
     max-width: 700px;
     padding: 0px 0px 15px 0px;
@@ -227,6 +247,7 @@ a {
         color: var(--white);
     }
 }
+
 /* -------- FIGCAPTION -------- */
 .figcaption {          
     font-size: var(--font-size-bildunterschrift);
@@ -288,13 +309,19 @@ a {
         padding: 0px 0px 10px 0px;
     }
 }
+
 /* -------- FIGCAPTION___INDEX -------- */
+
 .figcaption_index {          
     display: flex;
     justify-content: center;
     font-size: var(--font-size-bildunterschrift);
     font-family: "IBMPlexMono";
     color: var(--grey);
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
 }
 
 .figcaption_index:hover {
@@ -303,7 +330,81 @@ a {
     font-family: "IBMPlexMono";
     color: var(--white);
 }
+
+@media (max-width: 375px) {
+.figcaption_index {          
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-size-bildunterschrift);
+    font-family: "IBMPlexMono";
+    color: var(--grey);
+    opacity: 1;               
+    pointer-events: auto;    
+    height: auto;           
+    overflow: visible;      
+   }
+
+  #button-projekt {
+    display: none; 
+  }
+}
+
+@media (max-width: 390px) {
+.figcaption_index {          
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-size-bildunterschrift);
+    font-family: "IBMPlexMono";
+    color: var(--grey);
+    opacity: 1;               
+    pointer-events: auto;    
+    height: auto;           
+    overflow: visible;      
+   }
+   
+  #button-projekt {
+    display: none; 
+  }
+}
+
+@media (max-width: 414px) {
+.figcaption_index {          
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-size-bildunterschrift);
+    font-family: "IBMPlexMono";
+    color: var(--grey);
+    opacity: 1;               
+    pointer-events: auto;    
+    height: auto;           
+    overflow: visible;      
+   }
+   
+  #button-projekt {
+    display: none; 
+  }
+}
+
+@media (max-width: 430px) {
+.figcaption_index {          
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-size-bildunterschrift);
+    font-family: "IBMPlexMono";
+    color: var(--grey);
+    opacity: 1;               
+    pointer-events: auto;    
+    height: auto;           
+    overflow: visible;      
+   }
+   
+  #button-projekt {
+    display: none; 
+  }
+}
+
 /* ---------------- INDEX___CONTAINER ---------------- */
+
 .container-index {                   
     padding: 0px 0px 0px 0px;
 }
@@ -335,7 +436,9 @@ a {
         padding: 0px 11px 0px 0px;
     }
 }
+
 /* -------- INDEX___GRID -------- */
+
 .index_grid { 
     width: 100; 
     height: 100;
@@ -408,7 +511,9 @@ a {
         overflow: hidden;
     }
 }
+
 /* ---------------- CONTAINER___BUTTONS ---------------- */
+
 .container-menue a {
     transition: color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
@@ -417,7 +522,9 @@ a {
     color: var(--highlight-color); 
     transform: translateX(2px); 
 }
+
 /* ---------------- BUTTONS ---------------- */
+
 #button-archiv, 
 #button-instagram, 
 #button-mail,
@@ -435,7 +542,32 @@ a {
     user-select: none;
     background: rgba(0, 0, 0, 0.7); 
 }
+
+#button-projekt {
+    background-color: transparent;
+    border: none;                 
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    flex-direction: column;
+    justify-content: left; 
+    color: var(--white);
+    padding: 0px 0px 0px 0px;
+    font-family: "IBMPlexMono";
+    font-size: 1.2rem;
+    z-index: 9999;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.7); 
+}
+
+#button-projekt.visible {
+    opacity: 1;
+}
+
 /* ---------------- CONTAINER___MENUE ---------------- */
+
 .container-menue {                         
     display: inline-flex; 
     position: fixed;
@@ -503,13 +635,17 @@ a {
         z-index: 9999;
     }
 }
+
 /* ---------------- CONTAINER___PROJECT ---------------- */
+
 .container-project { 
     margin: 0;
     height: auto;
     padding: 50px 20px 0px 20px;
 }
+
 /* -------- PROJECT___TITEL -------- */
+
 #project-titel {
     background-color: transparent;
     border: none;                 
@@ -524,7 +660,9 @@ a {
     user-select: none;
     background: rgba(0, 0, 0, 0.7); 
 }
+
 /* ---------------- CONTAINER___KONTAKT ---------------- */
+
 .container-kontakt { 
     height: auto;
     padding: 60px 0px 0px 20px;
@@ -557,7 +695,9 @@ a {
         padding: 20px 0px 0px 20px;
     }
 }
+
 /* ---------------- CONTAINER___FOOTER ---------------- */
+
 .container-footer,
 .container-footer ul,
 .container-footer li {
@@ -1667,44 +1807,6 @@ a {
     opacity: 1;
 }
 
-.plakat-salzhaus {
-    display: block;
-    margin-inline: auto; 
-    width: 45%;
-}
-
-@media (max-width: 375px) {   
-    .plakat-salzhaus {
-        display: block;
-        margin-inline: auto; 
-        width: 100%;
-    }
-}
-
-@media (max-width: 390px) {   
-    .plakat-salzhaus {
-        display: block;
-        margin-inline: auto;
-        width: 100%;
-    }
-}
-
-@media (max-width: 414px) {   
-    .plakat-salzhaus {
-        display: block;
-        margin-inline: auto; 
-        width: 100%;
-    }
-}
-
-@media (max-width: 430px) {   
-    .plakat-salzhaus {
-        display: block;
-        margin-inline: auto; 
-        width: 100%;
-    }
-}
-
 .pillbox-container {
     padding: 60px 0px 0px 0px;
     display: grid;
@@ -1747,4 +1849,31 @@ a {
         max-width: 100%;
         padding: 60px 0px 0px 0px;
     }
+}
+
+/* projekttitel unten am fensterrand, außerhalb des sichtbaren bereichs */
+#project-title {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 1.25rem;
+
+  /* start verborgen und rausgeschoben */
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  pointer-events: none; /* klick-durchlässig */
+  z-index: 1000;
+}
+
+/* wenn scrollY > threshold */
+#project-title.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
