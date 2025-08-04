@@ -176,3 +176,68 @@ window.addEventListener('resize', setupHoverTitles);
 
 console.log("%c 🚀 Welcome to archiv3000! ", "background: black; color: cyan; font-size: 16px;");
 console.log("%c You found the hidden console message! If you want to collaborate, email me at leandra.tmn@gmail.com", "background: black; color: limegreen;");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mainContent = document.getElementById('main-content');
+
+  // Links abfangen
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+
+      // Prüfen ob interner Link (kein #, kein externes http)
+      if (href && !href.startsWith('#') && !href.startsWith('http')) {
+        e.preventDefault();
+        loadPage(href);
+      }
+    });
+  });
+
+  async function loadPage(url) {
+    try {
+      const response = await fetch(url);
+      const text = await response.text();
+
+      // Neues DOM parsen
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+      const newMain = doc.querySelector('main');
+
+      if (newMain) {
+        // Übergang: ausblenden
+        mainContent.style.opacity = '0';
+
+        setTimeout(() => {
+          mainContent.innerHTML = newMain.innerHTML; // Inhalt ersetzen
+          mainContent.style.opacity = '1';
+          history.pushState({ path: url }, '', url);
+
+          // Falls du nachladen musst, z.B. Events neu binden
+          rebindLinks();
+        }, 200);
+      }
+    } catch (err) {
+      console.error('Fehler beim Laden:', err);
+    }
+  }
+
+  // Back- und Forward-Buttons
+  window.addEventListener('popstate', e => {
+    if (e.state && e.state.path) {
+      loadPage(e.state.path);
+    }
+  });
+
+  function rebindLinks() {
+    // Nach jedem Seitenwechsel erneut Links abfangen
+    document.querySelectorAll('a').forEach(link => {
+      link.onclick = event => {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('#') && !href.startsWith('http')) {
+          event.preventDefault();
+          loadPage(href);
+        }
+      };
+    });
+  }
+});
