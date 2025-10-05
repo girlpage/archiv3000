@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Graphic Design Portfolio Website archiv 3000">
 	<meta name="keywords" content="Portfolio, Graphic Design, Design, front-end, Zines">
-    <title>archiv3000</title>
+  <title>archiv3000</title>
 	<!-- Favicon für Standard-Browser -->
-	<link rel="icon" href="16x16.png" sizes="32x32" type="image/png">
-	<link rel="icon" href="32x32.png" sizes="32x32" type="image/png">
-	<link rel="icon" href="48x48.png" sizes="48x48" type="image/png">
-	<link rel="icon" href="192x192.png" sizes="192x192" type="image/png">
-
+	<link rel="icon" href="assets/images/favicon/16x16.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="assets/images/favicon/32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="assets/images/favicon/48x48.png" sizes="48x48" type="image/png">
+	<link rel="icon" href="assets/images/favicon/192x192.png" sizes="192x192" type="image/png">
 	<!-- Apple Touch Icon für iPhones & iPads -->
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="styles/styles.css"> <!--css zuerst-->
 	<script src="scripts/script.js" defer></script> <!--js als zweites, defer um das file erst nach dem css file zu laden-->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js" defer></script>
+	<script src="scripts/sketch.js" defer></script>
 </head>
 <body>
 	<main>
 		<nav class="container-menue">	<!--container-menue-->
 			<button id="button-archiv"><a href="index.html" draggable="false">archiv</a></button>
-			<button id="button-kontakt"><a href="kontakt/kontakt.html" draggable="false">kontakt</a></button>
+			<button id="button-kontakt"><a href="html/kontakt.html" draggable="false">kontakt</a></button>
 			<button id="button-projekt"></button>	  
 		</nav>
 		<div class="container-index">
 			<div class="index_grid"> <!--Content-->	
-				<a class="img_archiv" href="archiv/technophobia/technophobia.html" draggable="false">
-					<img src="technophobia.png" alt="Bild zur Arbeit Technophobia" draggable="false">
+				<a class="img_archiv" href="html/technophobia.html" draggable="false">
+					<img src="assets/images/home/technophobia.webp" alt="Bild zur Arbeit Technophobia" draggable="false">
 					<p class="figcaption_index" alt="Projektitel Technophobia">technophobia</p>
 				</a>
-				<a class="img_archiv" href="archiv/using_ai/using_ai.html" draggable="false">
-					<img src="using_ai.png" alt="Bild zur Arbeit using ai" draggable="false">
+				<a class="img_archiv" href="html/using_ai.html" draggable="false">
+					<img src="assets/images/home/using_ai.webp" alt="Bild zur Arbeit using ai" draggable="false">
 					<p class="figcaption_index" alt="Projektitel using ai">using ai</p>
 				</a>
-				<a class="img_archiv" href="archiv/fashion_mania/fashion_mania.html" draggable="false">
-					<img src="fashion_mania.png" alt="Bild zur Arbeit fashion mania" draggable="false">
+				<a class="img_archiv" href="html/fashion_mania.html" draggable="false">
+					<img src="assets/images/home/fashion_mania.webp" alt="Bild zur Arbeit fashion mania" draggable="false">
 					<p class="figcaption_index" alt="Projektitel Fashion Mania">fashion mania</p>
 				</a>
-				<a class="img_archiv" href="archiv/embodied_orchestra/embodied_orchestra.html" draggable="false">
-					<img src="embodied_orchestra.png" alt="Bild zur Arbeit embodied orchestra" draggable="false">
+				<a class="img_archiv" href="html/embodied_orchestra.html" draggable="false">
+					<img src="assets/images/home/embodied_orchestra.webp" alt="Bild zur Arbeit embodied orchestra" draggable="false">
 					<p class="figcaption_index" alt="Projekttitel embodied orchestra">embodied orchestra</p>
 				</a>
-				<a class="img_archiv" href="archiv/ascii_generator/ascii_generator.html" draggable="false">
-					<img src="ascii_generator.png" alt="Bild zur Arbeit ASCII generator Zine" draggable="false">
+				<a class="img_archiv" href="html/ascii_generator.html" draggable="false">
+					<img src="assets/images/home/ascii_generator.webp" alt="Bild zur Arbeit ASCII generator Zine" draggable="false">
 					<p class="figcaption_index" alt="Projektitel ascii generator">ascii generator</p>
 				</a>
-				<a class="img_archiv" href="archiv/stadthaus_romanshorn/stadthaus_romanshorn.html" draggable="false">
-					<img src="stadthaus_romanshorn.png" alt="Bild zur Arbeit Architekturwettbewerb Stadthaus Romanshorn Bericht" draggable="false">
+				<a class="img_archiv" href="html/stadthaus_romanshorn.html" draggable="false">
+					<img src="assets/images/home/stadthaus_romanshorn.webp" alt="Bild zur Arbeit Architekturwettbewerb Stadthaus Romanshorn Bericht" draggable="false">
 					<p class="figcaption_index" alt="Projektitel Bericht Architekturwettbewerb Stadthaus Romanshorn">stadthaus romanshorn</p>
 				</a>
-				<a class="img_archiv" href="archiv/zeichensysteme/zeichensysteme.html" draggable="false">
-					<img src="zeichensysteme.png" alt="Bild zur Arbeit Heilbad St.Moritz Piktogramme" draggable="false">
+				<a class="img_archiv" href="html/zeichensysteme.html" draggable="false">
+					<img src="assets/images/home/zeichensysteme.webp" alt="Bild zur Arbeit Heilbad St.Moritz Piktogramme" draggable="false">
 					<p class="figcaption_index" alt="Projektitel Piktogramme Heilbad St.Moritz">zeichensysteme</p>
 				</a>
-				<a class="img_archiv" href="archiv/feministisches_streikhaus_archiv/feministisches_streikhaus_archiv.html" draggable="false">
-					<img src="website_fsa.png" alt="Bild zur Arbeit Website für das feministische Streikhaus Archiv" draggable="false">
+				<a class="img_archiv" href="html/feministisches_streikhaus_archiv.html" draggable="false">
+					<img src="assets/images/home/website_fsa.webp" alt="Bild zur Arbeit Website für das feministische Streikhaus Archiv" draggable="false">
 					<p class="figcaption_index" alt="Projektitel Website für das feministisches Streikhaus Archiv">website archiv 115</p>
 				</a>
-				<a class="img_archiv" href="archiv/park_platz/park_platz.html" draggable="false">
-					<img src="park_platz.png" alt="Bild zur Arbeit Soli T-Shirts für die Zwischennutzung Park Platz in Zürich" draggable="false">
+				<a class="img_archiv" href="html/park_platz.html" draggable="false">
+					<img src="assets/images/home/park_platz.webp" alt="Bild zur Arbeit Soli T-Shirts für die Zwischennutzung Park Platz in Zürich" draggable="false">
 					<p class="figcaption_index" alt="Projektitel Park Platz Soli T-Shirts">park platz</p>
 				</a>
-				<a class="img_archiv" href="archiv/sole_controversy/sole_controversy.html" draggable="false">
-					<img src="sole_controversy.png" alt="Bild zur Arbeit sole controversy: a visual summary of the yeezy scandal" draggable="false">
+				<a class="img_archiv" href="html/sole_controversy.html" draggable="false">
+					<img src="assets/images/home/sole_controversy.webp" alt="Bild zur Arbeit sole controversy: a visual summary of the yeezy scandal" draggable="false">
 					<p class="figcaption_index" alt="Projektitel sole controversy: a visual summary of the yeezy scandal">yeezy scandal</p>
 				</a>
-				<a class="img_archiv" href="archiv/redesign_nice_magazine/redesign_nice_magazine.html" draggable="false">
-					<img src="redesign_nice_magazine.png" alt="Bild zur Arbeit Redesign Nice Magazine" draggable="false">
+				<a class="img_archiv" href="html/redesign_nice_magazine.html" draggable="false">
+					<img src="assets/images/home/redesign_nice_magazine.webp" alt="Bild zur Arbeit Redesign Nice Magazine" draggable="false">
 					<p class="figcaption_index" alt="Projektitel redesign nice magazine">redesign nice magazine</p>
 				</a>
 			</div>

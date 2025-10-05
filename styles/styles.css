@@ -20,7 +20,7 @@
 /* ---------------- CURSOR ---------------- */
 
 * {
-    cursor: url("cursor.png"), auto;
+    cursor: url("../assets/images/cursor/cursor.png"), auto;
 }
 
 .ascii-cursor {
@@ -131,12 +131,12 @@ a {
 
 @font-face { /* font authentic sans */
     font-family: 'authentic-sans';
-    src: url('../authentic-sans-90.woff2') format('woff2');
+    src: url('../assets/fonts/authentic-sans-90.woff2') format('woff2');
 }
 
 @font-face { /* font IBM Plex Mono */
     font-family: 'IBMPlexMono';
-    src: url('../IBMPlexMono.woff2') format('woff2');
+    src: url('../assets/fonts/IBMPlexMono.woff2') format('woff2');
 }
 
 /* ---------------- FONTSIZES___FONTSTYLES ---------------- */
@@ -546,7 +546,8 @@ a {
 
 /* ---------------- BUTTONS ---------------- */
 
-#button-archiv, 
+#button-archiv,
+#button-filler, 
 #button-instagram, 
 #button-mail,
 #button-kontakt {
@@ -592,6 +593,8 @@ a {
 .container-menue {                         
     display: inline-flex; 
     position: fixed;
+    top: 0;
+    left: 0;
     justify-content: left; 
     color: var(--white);
     padding: 5px 0px 0px 18px;
@@ -603,61 +606,37 @@ a {
 
 @media (max-width: 375px) {
     .container-menue {                         
-        display: inline-flex; 
-        position: fixed;
-        justify-content: left; 
-        color: var(--white);
         padding: 5px 0px 0px 18px;
-        font-family: "IBMPlexMono";
         font-size: 1.2rem;
         gap: 30px;
-        z-index: 9999;
     }
 }
 
 @media (max-width: 390px) {
     .container-menue {                         
-        display: inline-flex; 
-        position: fixed;
-        justify-content: left; 
-        color: var(--white);
         padding: 5px 0px 0px 18px;
-        font-family: "IBMPlexMono";
         font-size: 1.2rem;
         gap: 30px;
-        z-index: 9999;
     }
 }
 
 @media (max-width: 414px) {
     .container-menue {                         
-        display: inline-flex; 
-        position: fixed;
-        justify-content: left; 
-        color: var(--white);
         padding: 5px 0px 0px 18px;
-        font-family: "IBMPlexMono";
         font-size: 1.2rem;
         gap: 30px;
-        z-index: 9999;
     }
 }
 
 @media (max-width: 430px) {
     .container-menue {                         
-        display: inline-flex; 
-        position: fixed;
-        justify-content: left; 
-        color: var(--white);
         padding: 5px 0px 0px 18px;
-        font-family: "IBMPlexMono";
         font-size: 1.2rem;
         gap: 30px;
-        z-index: 9999;
     }
 }
 
-/* ---------------- CONTAINER___PROJECT ---------------- */
+/* container-project */
 
 .container-project { 
     margin: 0;
@@ -665,7 +644,7 @@ a {
     padding: 50px 20px 0px 20px;
 }
 
-/* -------- PROJECT___TITEL -------- */
+/* project-titel */
 
 #project-titel {
     background-color: transparent;
